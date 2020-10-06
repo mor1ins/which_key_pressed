@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.event-container {
+  width: 700px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid black;*/
+  margin: 30px 0;
+}
+
+.event-container::before, .event-container::after {
+  content: '';
+  width: 100%;
+  order: 1;
+}
+
+.block:nth-child(-n+2) {
+  width: 308px;
+  height: 130px;
+}
+
+.block > .block-value {
+  color: orange;
+  font-size: 35px;
+}
+
+.block:nth-child(-n + 2) > .block-value {
+  font-size: 55px;
+  /*margin-top: 55px;*/
+}
+
+.block:nth-child(n + 3) {
+  width: 190px;
+  height: 100px;
+  /*color: green;*/
+  order: 1;
+}
+
+.block:nth-child(n + 6) {
+  /*color: blue;*/
+  order: 2;
+}
+
+.hidden-input {
+  opacity: 0;
+}
