@@ -7,11 +7,17 @@ class Block extends React.Component {
         const name = this.props.name;
         const info = this.props.info;
 
+        if (name === undefined || info[name] === undefined) {
+            return <h1>Что-то пошло не так.</h1>;
+        }
+
+        const isUndefined = (name && info[name]) === undefined
+
         console.log(`rendering ${name}-block with ${info[name]}`)
 
         return (
             <div className="block">
-                <div className="block-value">{info[name] !== undefined ? info[name].toString() : 'NaN'}</div>
+                <div className="block-value">{ info[name].toString() }</div>
                 <div className="block-name">{name}</div>
             </div>
         )

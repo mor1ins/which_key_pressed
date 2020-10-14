@@ -41,8 +41,11 @@ body {
   }
 }
 
-.event-container {
+.app-container {
   max-width: 400px;
+}
+
+.event-container {
   display: flex;
   flex-flow: row wrap;
   align-content: start;

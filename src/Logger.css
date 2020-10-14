@@ -1,0 +1,9 @@
+.logger-container {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: normal;
+}
